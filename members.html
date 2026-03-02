@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AstroHaven Astronomy Club — Exploring the Universe Together.">
+<title>Members · AstroHaven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Toast -->
+<div class="notif" id="notif">
+  <div class="notif-title" id="notifTitle">Success</div>
+  <div id="notifMsg">Done!</div>
+</div>
+
+<!-- Loader -->
+<div id="loader">
+  <img class="loader-logo-img" src="LOGO.png" alt="AstroHaven">
+  <div class="loader-text">Initializing AstroHaven</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scrollProgress"></div>
+
+<!-- Star canvas -->
+<canvas id="starCanvas"></canvas>
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="LOGO.png" alt="AstroHaven">
+    ASTROHAVEN
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"    id="nav-home">Home</a></li>
+    <li><a href="about.html"    id="nav-about">About</a></li>
+    <li><a href="members.html"  id="nav-members">Members</a></li>
+    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="events.html"   id="nav-events">Events</a></li>
+    <li><a href="gallery.html"  id="nav-gallery">Gallery</a></li>
+    <li><a href="news.html"     id="nav-news">News</a></li>
+    <li><a href="resources.html" id="nav-resources">Resources</a></li>
+    <li><a href="contact.html"  id="nav-contact" class="nav-cta">Join &amp; Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="members.html">Members</a>
+  <a href="projects.html">Projects</a>
+  <a href="events.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Join &amp; Contact</a>
+</div>
+
+<main>
+<div class="page-hero" >
+  <div>
+    <div class="section-label">Our People</div>
+    <h1 class="page-hero-title">Leadership of<br><span style="color:var(--accent2)">AstroHaven</span></h1>
+    <div class="section-divider"></div>
+    <p class="section-desc">Meet the four core members who guide our global community of 54 astronomers.</p>
+  </div>
+</div>
+<div class="section-separator"></div>
+<section style="padding-top:60px;padding-bottom:88px">
+  <div class="members-grid-2x2">
+    <div class="member-sec reveal">
+      <div class="member-sec-avatar">👩‍🚀</div>
+      <div class="member-sec-info">
+        <div class="member-sec-role">Club President</div>
+        <div class="member-sec-name">Dr. Layla Al-Rashid</div>
+        <div class="member-sec-division">Research Division Lead · Variable Star Specialist</div>
+        <div class="member-sec-bio">Founding member and club president. Holds a PhD in astrophysics and leads the overall strategic direction of AstroHaven. She has led Project Meridian for three years, contributing to peer-reviewed publications on RR Lyrae period variations — work cited by researchers at ESO and the IAU.<br><br>Her vision of building an online astronomy club that produces genuinely rigorous science shaped every division and protocol we have today. She personally reviews all AAVSO data submissions and mentors new research members.</div>
+      </div>
+    </div>
+    <div class="member-sec reveal">
+      <div class="member-sec-avatar">👨‍💼</div>
+      <div class="member-sec-info">
+        <div class="member-sec-role">Vice President &amp; Platform Architect</div>
+        <div class="member-sec-name">Thomas Müller</div>
+        <div class="member-sec-division">Operations Lead · Software Engineer</div>
+        <div class="member-sec-bio">Thomas is the technological backbone of AstroHaven. He designed and built our custom online collaboration platform from scratch — the infrastructure that allows 54 members to observe, communicate, and share data seamlessly in real time.<br><br>His Phase 2 platform upgrade enabled fully synchronised multi-site imaging sessions and remote telescope coordination, features previously only available to professional observatories. He runs the Technical Division and mentors members interested in astronomical software development.</div>
+      </div>
+    </div>
+    <div class="member-sec reveal">
+      <div class="member-sec-avatar">🧑‍🔬</div>
+      <div class="member-sec-info">
+        <div class="member-sec-role">Research Director</div>
+        <div class="member-sec-name">Dr. James Okafor</div>
+        <div class="member-sec-division">Pioneer Member · Exoplanet Transit Specialist</div>
+        <div class="member-sec-bio">A PhD astrophysicist who joined AstroHaven after our data quality convinced him that online amateur clubs could do professional-grade science. He now leads Project Horizon — our multi-site exoplanet transit observation programme.<br><br>Dr. Okafor oversees all research methodology, peer-review standards, and AAVSO reporting protocols. Under his direction, Project Horizon achieved its first confirmed detection of WASP-17b with 1.3 mmag photometric precision.</div>
+      </div>
+    </div>
+    <div class="member-sec reveal">
+      <div class="member-sec-avatar">👩‍💻</div>
+      <div class="member-sec-info">
+        <div class="member-sec-role">Outreach &amp; Communications Director</div>
+        <div class="member-sec-name">Amina Osei</div>
+        <div class="member-sec-division">Outreach Division Lead · Education Specialist</div>
+        <div class="member-sec-bio">The driving force behind AstroHaven's public presence and educational programmes. Amina manages the club's virtual star parties, school outreach initiatives, newsletter, and content strategy across all platforms.<br><br>Since joining in 2021, she has personally introduced over 500 people to astronomy through live-streamed events and educational video series. Her "Eyes on the Universe" school programme has now reached 1,000 students across 14 schools in 9 countries.</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:64px;text-align:center">
+    <p style="font-size:1rem;font-weight:500;color:var(--gold);margin-bottom:28px">AstroHaven has 54 active members. Want to join our story?</p>
+    <a href="contact.html" class="btn-primary">Apply to Join</a>
+  </div>
+</section>
+</main>
+<footer id="mainFooter">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-row">
+        <img class="footer-logo-img" src="LOGO.png" alt="AstroHaven">
+        <div>
+          <div>ASTROHAVEN</div>
+          <div class="footer-tagline">Online Astronomy Club · Est. 2020</div>
+        </div>
+      </div>
+      <div class="footer-desc">A premier global online astronomy community dedicated to scientific discovery, celestial observation, and advancing humanity's understanding of the cosmos since 2020.</div>
+    </div>
+    <div class="social-links" style="margin-top:0">
+      <a href="#" onclick="notify('Opening…','Redirecting to X.');return false;" class="social-link">𝕏</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to LinkedIn.');return false;" class="social-link">in</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Instagram.');return false;" class="social-link">📷</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to YouTube.');return false;" class="social-link">▶</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Discord.');return false;" class="social-link">💬</a>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>The Club</h4>
+      <ul>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="about.html#timeline">Timeline</a></li>
+        <li><a href="about.html#values">Core Values</a></li>
+        <li><a href="members.html">Leadership</a></li>
+        <li><a href="press.html">Press &amp; Media</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Science</h4>
+      <ul>
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="projects.html#meridian">Project Meridian</a></li>
+        <li><a href="projects.html#horizon">Project Horizon</a></li>
+        <li><a href="projects.html#solar">Solar Programme</a></li>
+        <li><a href="article-varstar.html">Variable Stars Report</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="events.html">Events Calendar</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="resources.html">Resource Library</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+        <li><a href="members.html">Meet the Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="contact.html">Apply to Join</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="press.html">Media Kit</a></li>
+        <li><a href="resources.html">Certifications</a></li>
+        <li><a href="#" onclick="notify('Opening Discord…','Redirecting to our Discord server.');return false;">Discord Server</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Monthly cosmic dispatches — observation reports, event notices, and research updates delivered to your inbox.</p>
+      <div class="newsletter-input-wrap">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
+        <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 AstroHaven Astronomy Club · All Rights Reserved</div>
+    <div style="display:flex;gap:18px;align-items:center">
+      <span>Exploring the Universe Since 2020</span>
+      <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

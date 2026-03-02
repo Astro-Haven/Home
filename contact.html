@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AstroHaven Astronomy Club — Exploring the Universe Together.">
+<title>Join & Contact · AstroHaven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Toast -->
+<div class="notif" id="notif">
+  <div class="notif-title" id="notifTitle">Success</div>
+  <div id="notifMsg">Done!</div>
+</div>
+
+<!-- Loader -->
+<div id="loader">
+  <img class="loader-logo-img" src="LOGO.png" alt="AstroHaven">
+  <div class="loader-text">Initializing AstroHaven</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scrollProgress"></div>
+
+<!-- Star canvas -->
+<canvas id="starCanvas"></canvas>
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="LOGO.png" alt="AstroHaven">
+    ASTROHAVEN
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"    id="nav-home">Home</a></li>
+    <li><a href="about.html"    id="nav-about">About</a></li>
+    <li><a href="members.html"  id="nav-members">Members</a></li>
+    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="events.html"   id="nav-events">Events</a></li>
+    <li><a href="gallery.html"  id="nav-gallery">Gallery</a></li>
+    <li><a href="news.html"     id="nav-news">News</a></li>
+    <li><a href="resources.html" id="nav-resources">Resources</a></li>
+    <li><a href="contact.html"  id="nav-contact" class="nav-cta">Join &amp; Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="members.html">Members</a>
+  <a href="projects.html">Projects</a>
+  <a href="events.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Join &amp; Contact</a>
+</div>
+
+<main>
+<div class="page-hero" >
+  <div>
+    <div class="section-label">Get Involved</div>
+    <h1 class="page-hero-title">Join &amp;<br><span style="color:var(--accent2)">Contact Us</span></h1>
+    <div class="section-divider"></div>
+    <p class="section-desc">Apply to become an AstroHaven member, or get in touch with our team. We're an online club — reach us anytime through our digital channels.</p>
+  </div>
+</div>
+<div class="section-separator"></div>
+<section class="reveal" style="display:flex;flex-direction:column;align-items:center;text-align:center">
+  <div class="section-label" style="justify-content:center">Application</div>
+  <h2 class="section-title">Join AstroHaven</h2>
+  <div class="section-divider" style="margin:22px auto"></div>
+  <p style="font-size:1rem;font-weight:400;color:var(--gold);margin-bottom:44px;max-width:620px;line-height:1.9">We're not looking for credentials — we're looking for commitment. Tell us who you are, what skills you bring, and what you want to build with us. We welcome astronomers of all experience levels.</p>
+  <div class="form-section" style="width:100%;max-width:760px;text-align:left">
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">First Name</label><div class="form-hint">As you'd like to be known in the club</div><input type="text" class="form-input" placeholder="Your first name"></div>
+      <div class="form-group"><label class="form-label">Last Name</label><div class="form-hint">&nbsp;</div><input type="text" class="form-input" placeholder="Your last name"></div>
+    </div>
+    <div class="form-group"><label class="form-label">Email Address</label><div class="form-hint">We'll use this for all club communications</div><input type="email" class="form-input" placeholder="your@email.com"></div>
+    <div class="form-group"><label class="form-label">Country / Region</label><div class="form-hint">We welcome members from anywhere in the world</div><input type="text" class="form-input" placeholder="e.g. Morocco, United Kingdom, Brazil…"></div>
+    <div class="form-group">
+      <label class="form-label">Astronomy Experience Level</label>
+      <div class="form-hint">Be honest — beginners are very welcome</div>
+      <select class="form-select"><option value="">Select your level…</option><option>Complete Beginner — just getting started</option><option>Casual Observer — 1 to 2 years of experience</option><option>Intermediate — 3 to 5 years, some equipment or software experience</option><option>Advanced Amateur — 5+ years, systematic observation or research experience</option><option>Professional Background — academic or institutional research experience</option></select>
+    </div>
+    <div class="form-group"><label class="form-label">Your Skills &amp; Expertise</label><div class="form-hint">Astronomy, programming, data analysis, imaging, writing, teaching, outreach, design — any relevant skill</div><textarea class="form-textarea" style="min-height:150px" placeholder="Describe your skills and background in as much detail as you like."></textarea></div>
+    <div class="form-group"><label class="form-label">What Will You Contribute to AstroHaven?</label><div class="form-hint">This is the most important question — be as specific as possible</div><textarea class="form-textarea" style="min-height:150px" placeholder="How do you plan to contribute? Research data? Helping beginners? Technical work?"></textarea></div>
+    <div class="form-group"><label class="form-label">What Draws You to Astronomy?</label><div class="form-hint">Tell us what sparked your interest</div><textarea class="form-textarea" placeholder="Your astronomy story — we want to hear it."></textarea></div>
+    <div class="form-group"><label class="form-label">Previous Astronomy Work (Optional)</label><div class="form-hint">Any prior observations, submissions, projects. Leave blank if not applicable</div><textarea class="form-textarea" placeholder="e.g. AAVSO observations submitted, imaging projects…"></textarea></div>
+    <div style="margin-top:12px"><button class="btn-primary" style="width:100%;padding:18px;font-size:.92rem" onclick="notify('Application Submitted!','Thank you — we will review your application and respond within 5 business days.')">Submit Application</button></div>
+  </div>
+</section>
+<div class="section-separator" style="margin:0 5vw"></div>
+
+<!-- TESTIMONIALS -->
+<section class="reveal" style="padding-top:80px">
+  <div class="section-label">Member Voices</div>
+  <h2 class="section-title">What Our Members Say</h2>
+  <div class="section-divider"></div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal"><p class="testimonial-text">"Joining AstroHaven changed how I understand both science and community. The research rigour here is unlike any online astronomy group I've encountered."</p><div class="testimonial-author"><div class="testimonial-avatar">👨‍🔬</div><div><div class="testimonial-name">Marcus Chen</div><div class="testimonial-role">Research Member · 2 Years</div></div></div></div>
+    <div class="testimonial-card reveal"><p class="testimonial-text">"I came in knowing nothing about telescopes. Within six months I was contributing data to an international database. The mentorship here is extraordinary."</p><div class="testimonial-author"><div class="testimonial-avatar">👩‍🚀</div><div><div class="testimonial-name">Sofia Martínez</div><div class="testimonial-role">Active Member · 1 Year</div></div></div></div>
+    <div class="testimonial-card reveal"><p class="testimonial-text">"As someone with a PhD in astrophysics, I was sceptical of amateur clubs. AstroHaven proved me completely wrong. The standard of work is genuinely impressive."</p><div class="testimonial-author"><div class="testimonial-avatar">🧑‍🎓</div><div><div class="testimonial-name">Dr. James Okafor</div><div class="testimonial-role">Research Director · 3 Years</div></div></div></div>
+  </div>
+</section>
+<div class="section-separator" style="margin:0 5vw"></div>
+
+<!-- FAQ -->
+<section class="reveal" style="padding-top:80px">
+  <div class="section-label">Questions</div>
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="section-divider"></div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Is AstroHaven fully online? <span class="faq-icon">+</span></button><div class="faq-answer">Yes, entirely. All our events, meetings, research sessions, and collaboration happen online. You can participate fully from anywhere in the world with an internet connection and a passion for astronomy.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do I need a telescope to join? <span class="faq-icon">+</span></button><div class="faq-answer">No telescope is required. Many valuable contributions involve data analysis, writing, education, design, programming, or event organisation — not direct observation. We welcome all roles.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">What experience level is required? <span class="faq-icon">+</span></button><div class="faq-answer">None. We accept complete beginners. What matters most is your genuine enthusiasm and what you plan to contribute. Our mentorship programme will pair you with an experienced member.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Is there a minimum age to join? <span class="faq-icon">+</span></button><div class="faq-answer">Members must be at least 16 years of age. Members under 18 require parental consent to participate in the club.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How long does the application review take? <span class="faq-icon">+</span></button><div class="faq-answer">We aim to review all applications within 5 business days. We read every application carefully — the more detail you provide, the better we can match you with the right division.</div></div>
+  </div>
+</section>
+<div class="section-separator" style="margin:0 5vw"></div>
+
+<!-- CONTACT FORM -->
+<section class="reveal" style="padding-top:80px;padding-bottom:88px">
+  <div class="contact-grid">
+    <div>
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2.5rem)">Send Us a Message</h2>
+      <div class="section-divider"></div>
+      <div class="contact-item"><div class="contact-icon">✉️</div><div class="contact-detail"><h4>Email</h4><p>hello@astrohaven.club<br>research@astrohaven.club<br>outreach@astrohaven.club</p></div></div>
+      <div class="contact-item"><div class="contact-icon">💬</div><div class="contact-detail"><h4>Discord Community</h4><p>Join our Discord server for real-time community discussion, event announcements, and member chat.</p></div></div>
+      <div class="contact-item"><div class="contact-icon">📅</div><div class="contact-detail"><h4>Response Times</h4><p>General enquiries: within 48 hours<br>Research collaborations: within 5 days<br>Press &amp; media: within 24 hours</p></div></div>
+      <div class="social-links">
+        <a href="#" onclick="notify('Opening…','Redirecting to AstroHaven X profile.');return false;" class="social-link">𝕏</a>
+        <a href="#" onclick="notify('Opening…','Redirecting to AstroHaven LinkedIn.');return false;" class="social-link">in</a>
+        <a href="#" onclick="notify('Opening…','Redirecting to AstroHaven Instagram.');return false;" class="social-link">📷</a>
+        <a href="#" onclick="notify('Opening…','Redirecting to AstroHaven YouTube.');return false;" class="social-link">▶</a>
+        <a href="#" onclick="notify('Opening…','Redirecting to AstroHaven Discord.');return false;" class="social-link">💬</a>
+      </div>
+    </div>
+    <div class="form-section" style="max-width:100%">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="First name"></div>
+        <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Last name"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="your@email.com"></div>
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <select class="form-select"><option>General Enquiry</option><option>Membership Question</option><option>Research Collaboration</option><option>Press &amp; Media</option><option>Feedback &amp; Suggestions</option><option>Technical Support</option></select>
+      </div>
+      <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" style="min-height:170px" placeholder="Write your message here…"></textarea></div>
+      <button class="btn-primary" style="width:100%;padding:17px" onclick="notify('Message Sent!','Thank you — we\'ll respond within 48 hours.')">Send Message</button>
+    </div>
+  </div>
+</section>
+</main>
+<footer id="mainFooter">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-row">
+        <img class="footer-logo-img" src="LOGO.png" alt="AstroHaven">
+        <div>
+          <div>ASTROHAVEN</div>
+          <div class="footer-tagline">Online Astronomy Club · Est. 2020</div>
+        </div>
+      </div>
+      <div class="footer-desc">A premier global online astronomy community dedicated to scientific discovery, celestial observation, and advancing humanity's understanding of the cosmos since 2020.</div>
+    </div>
+    <div class="social-links" style="margin-top:0">
+      <a href="#" onclick="notify('Opening…','Redirecting to X.');return false;" class="social-link">𝕏</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to LinkedIn.');return false;" class="social-link">in</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Instagram.');return false;" class="social-link">📷</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to YouTube.');return false;" class="social-link">▶</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Discord.');return false;" class="social-link">💬</a>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>The Club</h4>
+      <ul>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="about.html#timeline">Timeline</a></li>
+        <li><a href="about.html#values">Core Values</a></li>
+        <li><a href="members.html">Leadership</a></li>
+        <li><a href="press.html">Press &amp; Media</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Science</h4>
+      <ul>
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="projects.html#meridian">Project Meridian</a></li>
+        <li><a href="projects.html#horizon">Project Horizon</a></li>
+        <li><a href="projects.html#solar">Solar Programme</a></li>
+        <li><a href="article-varstar.html">Variable Stars Report</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="events.html">Events Calendar</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="resources.html">Resource Library</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+        <li><a href="members.html">Meet the Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="contact.html">Apply to Join</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="press.html">Media Kit</a></li>
+        <li><a href="resources.html">Certifications</a></li>
+        <li><a href="#" onclick="notify('Opening Discord…','Redirecting to our Discord server.');return false;">Discord Server</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Monthly cosmic dispatches — observation reports, event notices, and research updates delivered to your inbox.</p>
+      <div class="newsletter-input-wrap">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
+        <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 AstroHaven Astronomy Club · All Rights Reserved</div>
+    <div style="display:flex;gap:18px;align-items:center">
+      <span>Exploring the Universe Since 2020</span>
+      <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

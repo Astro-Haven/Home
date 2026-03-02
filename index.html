@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AstroHaven Astronomy Club — Exploring the Universe Together.">
+<title>Home · AstroHaven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Toast -->
+<div class="notif" id="notif">
+  <div class="notif-title" id="notifTitle">Success</div>
+  <div id="notifMsg">Done!</div>
+</div>
+
+<!-- Loader -->
+<div id="loader">
+  <img class="loader-logo-img" src="LOGO.png" alt="AstroHaven">
+  <div class="loader-text">Initializing AstroHaven</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scrollProgress"></div>
+
+<!-- Star canvas -->
+<canvas id="starCanvas"></canvas>
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="LOGO.png" alt="AstroHaven">
+    ASTROHAVEN
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"    id="nav-home">Home</a></li>
+    <li><a href="about.html"    id="nav-about">About</a></li>
+    <li><a href="members.html"  id="nav-members">Members</a></li>
+    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="events.html"   id="nav-events">Events</a></li>
+    <li><a href="gallery.html"  id="nav-gallery">Gallery</a></li>
+    <li><a href="news.html"     id="nav-news">News</a></li>
+    <li><a href="resources.html" id="nav-resources">Resources</a></li>
+    <li><a href="contact.html"  id="nav-contact" class="nav-cta">Join &amp; Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="members.html">Members</a>
+  <a href="projects.html">Projects</a>
+  <a href="events.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Join &amp; Contact</a>
+</div>
+
+<main>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+  <div class="hero-orbit"></div><div class="hero-orbit"></div><div class="hero-orbit"></div>
+  <div class="hero-logo-wrap" style="z-index:1">
+    <img src="LOGO.png" alt="AstroHaven Logo" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;">
+  </div>
+  <div class="hero-eyebrow">Online Astronomy Club · Est. 2020</div>
+  <h1 class="hero-title">Exploring the <span class="accent-word">Universe</span><br>Together</h1>
+  <p class="hero-sub">AstroHaven is a premier global online astronomy community dedicated to scientific discovery, celestial research, and advancing our collective understanding of the cosmos — from anywhere in the world.</p>
+  <div class="hero-btns">
+    <a href="contact.html" class="btn-primary">Join AstroHaven</a>
+    <a href="projects.html" class="btn-secondary">Explore Our Missions</a>
+  </div>
+  <div class="scroll-indicator"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+<div class="section-separator"></div>
+
+<!-- MISSION -->
+<section class="reveal">
+  <div class="section-label">Our Purpose</div>
+  <div class="flex-between">
+    <div><h2 class="section-title">Mission &amp; Vision</h2><div class="section-divider"></div>
+    <p class="section-desc">We exist at the intersection of science, wonder, and global community — united by our collective gaze toward the infinite expanse above.</p></div>
+  </div>
+  <div class="sec-cards">
+    <div class="sec-card reveal">
+      <div class="sec-card-icon-wrap"><div class="sec-card-icon">🔭</div><div class="sec-card-num">01 —</div></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Scientific Observation</div>
+        <div class="sec-card-text">Conducting systematic celestial observation sessions and coordinating remote observations across members worldwide — documenting findings that contribute to the global astronomical record. Our distributed network allows 24-hour sky coverage across both hemispheres simultaneously, something no single observatory can achieve alone.</div>
+        <div class="sec-card-text">Members share live telescope feeds through our platform, enabling collaborative real-time analysis of variable stars, transient events, and meteor activity — all logged in our shared scientific database.</div>
+        <span class="sec-card-tag">Research</span><span class="sec-card-tag">Global Coverage</span><span class="sec-card-tag">Real-time</span>
+      </div>
+      <div class="sec-card-arrow">→</div>
+    </div>
+    <div class="sec-card reveal">
+      <div class="sec-card-icon-wrap"><div class="sec-card-icon">🛰️</div><div class="sec-card-num">02 —</div></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Research &amp; Discovery</div>
+        <div class="sec-card-text">Supporting member-led research projects from variable star photometry to exoplanet transit detection. Our online collaboration tools let members across time zones contribute jointly to real science that matters — pushing the boundaries of what a distributed amateur astronomy community can achieve.</div>
+        <div class="sec-card-text">We maintain rigorous publication-grade data standards, contribute to the AAVSO and Minor Planet Center databases, and co-author peer-reviewed papers with our most dedicated research members.</div>
+        <span class="sec-card-tag">Photometry</span><span class="sec-card-tag">AAVSO</span><span class="sec-card-tag">Publications</span>
+      </div>
+      <div class="sec-card-arrow">→</div>
+    </div>
+    <div class="sec-card reveal">
+      <div class="sec-card-icon-wrap"><div class="sec-card-icon">🌍</div><div class="sec-card-num">03 —</div></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Global Community Outreach</div>
+        <div class="sec-card-text">Inspiring the next generation through virtual star parties, live-streamed observation sessions, and accessible educational resources for all ages — reaching people in regions that would otherwise have no astronomy community to join.</div>
+        <div class="sec-card-text">Our "Eyes on the Universe" school programme has reached over 1,000 students across 14 schools in 9 countries, proving that geography should never be a barrier to exploring the cosmos.</div>
+        <span class="sec-card-tag">Education</span><span class="sec-card-tag">Schools</span><span class="sec-card-tag">Public Events</span>
+      </div>
+      <div class="sec-card-arrow">→</div>
+    </div>
+    <div class="sec-card reveal">
+      <div class="sec-card-icon-wrap"><div class="sec-card-icon">📡</div><div class="sec-card-num">04 —</div></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Technology &amp; Innovation</div>
+        <div class="sec-card-text">Developing open-source data pipelines, coordinating remote telescopes, and exploring the frontiers of astrophotography and data science — making advanced astronomy tools accessible to every member regardless of their physical location or equipment budget.</div>
+        <div class="sec-card-text">Our custom-built collaboration platform handles synchronised multi-site imaging, automated data submission, and real-time voice coordination for up to 200 participants simultaneously — all developed in-house by our technical division.</div>
+        <span class="sec-card-tag">Open Source</span><span class="sec-card-tag">Data Science</span><span class="sec-card-tag">Platform</span>
+      </div>
+      <div class="sec-card-arrow">→</div>
+    </div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- STATS -->
+<section class="reveal" style="background:rgba(7,14,28,.98);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-label">By The Numbers</div>
+  <h2 class="section-title">Our Impact</h2>
+  <div class="section-divider"></div>
+  <div class="stats-row">
+    <div class="stat-item"><span class="stat-number" data-target="54">0</span><span class="stat-label">Active Members</span></div>
+    <div class="stat-item"><span class="stat-number" data-target="7">0</span><span class="stat-label">Research Projects</span></div>
+    <div class="stat-item"><span class="stat-number" data-target="200">0</span><span class="stat-label">Observation Hours</span></div>
+    <div class="stat-item"><span class="stat-number" data-target="4">0</span><span class="stat-label">Events Hosted</span></div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- EVENTS PREVIEW -->
+<section class="reveal">
+  <div class="flex-between">
+    <div><div class="section-label">Schedule</div><h2 class="section-title">Upcoming Events</h2><div class="section-divider"></div></div>
+    <a href="events.html" class="btn-ghost btn-sm">View All →</a>
+  </div>
+  <div class="sec-cards">
+    <div class="sec-card reveal" style="cursor:default">
+      <div class="event-date-badge"><span class="day">14</span><span class="month">Mar</span></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Deep Sky Virtual Observation Night</div>
+        <div class="sec-card-text">Monthly live-streamed gathering on our club platform. Members share live telescope feeds from across the globe targeting M42, NGC 891, and the Leo Triplet.</div>
+        <div class="sec-card-meta"><span>🕙 20:00 UTC</span><span>👥 All Members</span><span>🌐 Club Platform</span></div>
+        <div style="margin-top:20px"><a href="#" onclick="notify('RSVP Confirmed!','You are registered for the Deep Sky Night on March 14.');return false;" class="btn-primary btn-sm">RSVP Now</a></div>
+        <span class="sec-card-tag" style="margin-top:16px">Observation</span><span class="sec-card-tag">Live</span>
+      </div>
+      <div class="sec-card-arrow" style="display:none"></div>
+    </div>
+    <div class="sec-card reveal" style="cursor:default">
+      <div class="event-date-badge"><span class="day">22</span><span class="month">Mar</span></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Astrophotography Post-Processing Workshop</div>
+        <div class="sec-card-text">Hands-on virtual workshop covering the complete astrophotography workflow from raw capture to final image.</div>
+        <div class="sec-card-meta"><span>🕙 14:00 UTC</span><span>💻 Zoom</span></div>
+        <div style="margin-top:20px"><a href="#" onclick="notify('RSVP Confirmed!','You are registered for the Astrophotography Workshop on March 22.');return false;" class="btn-primary btn-sm">RSVP Now</a></div>
+        <span class="sec-card-tag" style="margin-top:16px">Workshop</span>
+      </div>
+      <div class="sec-card-arrow" style="display:none"></div>
+    </div>
+    <div class="sec-card reveal" style="cursor:default">
+      <div class="event-date-badge"><span class="day">05</span><span class="month">Apr</span></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Spring Public Virtual Star Party</div>
+        <div class="sec-card-text">Annual spring outreach event open to the public and free to attend. Live-streamed guided tours from multiple member telescopes.</div>
+        <div class="sec-card-meta"><span>🕙 19:30 UTC</span><span>📺 YouTube Live</span><span>🌐 Free Entry</span></div>
+        <div style="margin-top:20px"><a href="#" onclick="notify('RSVP Confirmed!','You are registered for the Spring Star Party on April 5.');return false;" class="btn-primary btn-sm">RSVP Now</a></div>
+        <span class="sec-card-tag" style="margin-top:16px">Public</span><span class="sec-card-tag">Free</span>
+      </div>
+      <div class="sec-card-arrow" style="display:none"></div>
+    </div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- FEATURED PROJECT -->
+<section class="reveal" style="background:rgba(5,10,22,.98)">
+  <div class="flex-between">
+    <div style="flex:1;max-width:600px">
+      <div class="section-label">Featured Mission</div>
+      <h2 class="section-title">Project Meridian</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Our flagship variable star monitoring program, contributing photometric data to the AAVSO international database. Since 2022, we've logged over 14,000 individual measurements across 62 target stars.</p>
+      <div style="margin-top:36px">
+        <div class="progress-bar-wrap"><div class="progress-label"><span>DATA COLLECTION</span><span>84%</span></div><div class="progress-bar"><div class="progress-fill" data-width="84"></div></div></div>
+        <div class="progress-bar-wrap"><div class="progress-label"><span>ANALYSIS PHASE</span><span>61%</span></div><div class="progress-bar"><div class="progress-fill" data-width="61"></div></div></div>
+      </div>
+      <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+        <a href="projects.html" class="btn-primary">View All Projects</a>
+        <a href="projects.html" class="btn-secondary btn-sm">Download Report</a>
+      </div>
+    </div>
+    <div style="font-size:10rem;opacity:.1;filter:drop-shadow(0 0 50px rgba(74,127,212,.5))">⭐</div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- MEMBER HIGHLIGHT -->
+<section class="reveal">
+  <div class="section-label">Spotlight</div>
+  <h2 class="section-title">Member Highlight</h2>
+  <div class="section-divider"></div>
+  <div class="member-highlight">
+    <div class="highlight-avatar">👩‍🚀</div>
+    <div class="highlight-info">
+      <div class="highlight-label">Member of the Month — March 2026</div>
+      <div class="highlight-name">Dr. Layla Al-Rashid</div>
+      <div class="highlight-role">Research Division Lead · Variable Star Specialist</div>
+      <p class="highlight-text">Dr. Al-Rashid has led Project Meridian for three years, publishing two peer-reviewed papers from the club's observational data. Her work on RR Lyrae period variations has been cited by researchers at ESO and the IAU, demonstrating that online amateur astronomy communities can produce science of genuine professional quality.</p>
+      <div style="margin-top:24px"><a href="members.html" class="btn-ghost btn-sm">Meet the Team →</a></div>
+    </div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- QUOTE -->
+<section class="quote-section reveal" style="background:rgba(5,10,22,.98)">
+  <div class="section-label" style="justify-content:center">Inspiration</div>
+  <div class="quote-display">
+    <span class="quote-mark">"</span>
+    <p class="quote-text" id="quoteText">The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.</p>
+    <span class="quote-author" id="quoteAuthor">— Carl Sagan</span>
+    <div class="quote-dots">
+      <div class="quote-dot active" onclick="setQuote(0)"></div>
+      <div class="quote-dot" onclick="setQuote(1)"></div>
+      <div class="quote-dot" onclick="setQuote(2)"></div>
+      <div class="quote-dot" onclick="setQuote(3)"></div>
+      <div class="quote-dot" onclick="setQuote(4)"></div>
+    </div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- GALLERY PREVIEW -->
+<section class="reveal">
+  <div class="flex-between">
+    <div><div class="section-label">Visual Archive</div><h2 class="section-title">Gallery</h2><div class="section-divider"></div></div>
+    <a href="gallery.html" class="btn-ghost btn-sm">Full Gallery →</a>
+  </div>
+  <div class="gallery-preview">
+    <div class="gallery-item"><div class="gallery-item-inner" style="background:linear-gradient(135deg,#0d1535,#1a2d6b)">🌌</div><div class="gallery-overlay"><span>Andromeda Galaxy — Nov 2025</span></div></div>
+    <div class="gallery-item"><div class="gallery-item-inner" style="background:linear-gradient(135deg,#0a1020,#0d1535)">🌙</div><div class="gallery-overlay"><span>Lunar Surface Detail</span></div></div>
+    <div class="gallery-item"><div class="gallery-item-inner" style="background:linear-gradient(135deg,#080d1a,#1a2d6b)">🪐</div><div class="gallery-overlay"><span>Saturn at Opposition</span></div></div>
+    <div class="gallery-item"><div class="gallery-item-inner" style="background:linear-gradient(135deg,#050810,#0c1228)">☄️</div><div class="gallery-overlay"><span>Perseid Meteor Trail</span></div></div>
+    <div class="gallery-item"><div class="gallery-item-inner" style="background:linear-gradient(135deg,#0d1535,#050810)">🌠</div><div class="gallery-overlay"><span>Milky Way Core</span></div></div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- NEWS PREVIEW -->
+<section class="reveal">
+  <div class="flex-between">
+    <div><div class="section-label">Latest Updates</div><h2 class="section-title">News &amp; Announcements</h2><div class="section-divider"></div></div>
+    <a href="news.html" class="btn-ghost btn-sm">All News →</a>
+  </div>
+  <div class="sec-cards" style="margin-top:36px">
+    <a href="article-iau.html" class="news-sec-card reveal">
+      <div class="news-sec-num">01 —</div>
+      <div class="news-sec-body">
+        <span class="news-sec-tag">Research · Feb 28, 2026</span>
+        <div class="news-sec-title">AstroHaven Data Cited in IAU Minor Planet Circular</div>
+        <div class="news-sec-excerpt">Our photometric observations of asteroid 2025 XK7 have been formally acknowledged in the latest IAU circular, marking a milestone for the club and the entire distributed amateur astronomy community.</div>
+        <div class="news-sec-meta"><span>Research Team</span><span>Read Article →</span></div>
+      </div>
+      <div class="news-arrow">→</div>
+    </a>
+    <a href="article-exoplanet.html" class="news-sec-card reveal">
+      <div class="news-sec-num">02 —</div>
+      <div class="news-sec-body">
+        <span class="news-sec-tag">Research · Jan 15, 2026</span>
+        <div class="news-sec-title">Project Horizon Captures First Confirmed Exoplanet Transit</div>
+        <div class="news-sec-excerpt">Our multi-site transit program achieved its first confirmed detection of WASP-17b — a landmark moment for distributed online astronomy and proof that amateur networks can do professional-grade science.</div>
+        <div class="news-sec-meta"><span>Research Division</span><span>Read Article →</span></div>
+      </div>
+      <div class="news-arrow">→</div>
+    </a>
+    <a href="article-starparty.html" class="news-sec-card reveal">
+      <div class="news-sec-num">03 —</div>
+      <div class="news-sec-body">
+        <span class="news-sec-tag">Event Report · Feb 10, 2026</span>
+        <div class="news-sec-title">Winter Virtual Star Party Draws Record 340 Attendees</div>
+        <div class="news-sec-excerpt">Our annual Winter Star Party exceeded all expectations with members and viewers from 28 countries joining us across three evenings of coordinated sky observations and live guided tours.</div>
+        <div class="news-sec-meta"><span>Outreach Team</span><span>Read Article →</span></div>
+      </div>
+      <div class="news-arrow">→</div>
+    </a>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- PARTNERS -->
+<section class="reveal text-center" style="background:rgba(5,10,22,.98)">
+  <div class="section-label" style="justify-content:center">Affiliations</div>
+  <h2 class="section-title">Partners &amp; Affiliations</h2>
+  <div class="section-divider" style="margin:22px auto"></div>
+  <div class="partners-row">
+    <div class="partner-badge">International Astronomical Union</div>
+    <div class="partner-badge">AAVSO</div>
+    <div class="partner-badge">Sky &amp; Telescope</div>
+    <div class="partner-badge">Dark Sky Association</div>
+    <div class="partner-badge">NASA/ADS</div>
+    <div class="partner-badge">Minor Planet Center</div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<!-- CTA -->
+<div class="cta-banner reveal">
+  <h2>Ready to Explore the Universe?</h2>
+  <p>Join a global online community of passionate astronomers. Whether you're a beginner or an expert, there's a place for you in AstroHaven.</p>
+  <a href="contact.html" class="btn-primary">Become a Member</a>
+</div>
+<div style="height:88px"></div>
+</main>
+<footer id="mainFooter">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-row">
+        <img class="footer-logo-img" src="LOGO.png" alt="AstroHaven">
+        <div>
+          <div>ASTROHAVEN</div>
+          <div class="footer-tagline">Online Astronomy Club · Est. 2020</div>
+        </div>
+      </div>
+      <div class="footer-desc">A premier global online astronomy community dedicated to scientific discovery, celestial observation, and advancing humanity's understanding of the cosmos since 2020.</div>
+    </div>
+    <div class="social-links" style="margin-top:0">
+      <a href="#" onclick="notify('Opening…','Redirecting to X.');return false;" class="social-link">𝕏</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to LinkedIn.');return false;" class="social-link">in</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Instagram.');return false;" class="social-link">📷</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to YouTube.');return false;" class="social-link">▶</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Discord.');return false;" class="social-link">💬</a>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>The Club</h4>
+      <ul>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="about.html#timeline">Timeline</a></li>
+        <li><a href="about.html#values">Core Values</a></li>
+        <li><a href="members.html">Leadership</a></li>
+        <li><a href="press.html">Press &amp; Media</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Science</h4>
+      <ul>
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="projects.html#meridian">Project Meridian</a></li>
+        <li><a href="projects.html#horizon">Project Horizon</a></li>
+        <li><a href="projects.html#solar">Solar Programme</a></li>
+        <li><a href="article-varstar.html">Variable Stars Report</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="events.html">Events Calendar</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="resources.html">Resource Library</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+        <li><a href="members.html">Meet the Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="contact.html">Apply to Join</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="press.html">Media Kit</a></li>
+        <li><a href="resources.html">Certifications</a></li>
+        <li><a href="#" onclick="notify('Opening Discord…','Redirecting to our Discord server.');return false;">Discord Server</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Monthly cosmic dispatches — observation reports, event notices, and research updates delivered to your inbox.</p>
+      <div class="newsletter-input-wrap">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
+        <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 AstroHaven Astronomy Club · All Rights Reserved</div>
+    <div style="display:flex;gap:18px;align-items:center">
+      <span>Exploring the Universe Since 2020</span>
+      <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

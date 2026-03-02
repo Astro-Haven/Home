@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AstroHaven Astronomy Club — Exploring the Universe Together.">
+<title>Projects · AstroHaven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Toast -->
+<div class="notif" id="notif">
+  <div class="notif-title" id="notifTitle">Success</div>
+  <div id="notifMsg">Done!</div>
+</div>
+
+<!-- Loader -->
+<div id="loader">
+  <img class="loader-logo-img" src="LOGO.png" alt="AstroHaven">
+  <div class="loader-text">Initializing AstroHaven</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scrollProgress"></div>
+
+<!-- Star canvas -->
+<canvas id="starCanvas"></canvas>
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="LOGO.png" alt="AstroHaven">
+    ASTROHAVEN
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"    id="nav-home">Home</a></li>
+    <li><a href="about.html"    id="nav-about">About</a></li>
+    <li><a href="members.html"  id="nav-members">Members</a></li>
+    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="events.html"   id="nav-events">Events</a></li>
+    <li><a href="gallery.html"  id="nav-gallery">Gallery</a></li>
+    <li><a href="news.html"     id="nav-news">News</a></li>
+    <li><a href="resources.html" id="nav-resources">Resources</a></li>
+    <li><a href="contact.html"  id="nav-contact" class="nav-cta">Join &amp; Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="members.html">Members</a>
+  <a href="projects.html">Projects</a>
+  <a href="events.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Join &amp; Contact</a>
+</div>
+
+<main>
+<div class="page-hero" >
+  <div>
+    <div class="section-label">Scientific Programs</div>
+    <h1 class="page-hero-title">Club <span style="color:var(--accent2)">Projects</span></h1>
+    <div class="section-divider"></div>
+    <p class="section-desc">Research programs that contribute meaningfully to global astronomy — all conducted remotely by members worldwide.</p>
+  </div>
+</div>
+<div class="section-separator"></div>
+<section id="meridian" style="padding-top:60px;padding-bottom:88px">
+  <div class="section-label">Active</div>
+  <h2 class="section-title" style="margin-bottom:36px">Ongoing Projects</h2>
+  <div class="project-card reveal">
+    <div class="project-header"><div><div class="project-title">Project Meridian — Variable Star Photometry</div></div><div class="project-status"><div class="status-dot active"></div><span style="color:#4ade80">ACTIVE</span></div></div>
+    <div class="project-body"><p class="project-desc">Systematic long-baseline photometric monitoring of 62 variable stars across RR Lyrae, Cepheid, and semi-regular classes. Data submitted monthly to the AAVSO International Database. Members participate remotely from their own setups — each contributing nightly measurements that build our multi-year baseline dataset.</p><div class="progress-bar-wrap"><div class="progress-label"><span>DATA COLLECTION</span><span>84%</span></div><div class="progress-bar"><div class="progress-fill" data-width="84"></div></div></div><div class="progress-bar-wrap"><div class="progress-label"><span>BASELINE COVERAGE</span><span>67%</span></div><div class="progress-bar"><div class="progress-fill" data-width="67"></div></div></div><div><span class="event-tag">Photometry</span><span class="event-tag">AAVSO</span><span class="event-tag">Long-baseline</span><span class="event-tag">RR Lyrae</span></div></div>
+  </div>
+  <div id="horizon" class="project-card reveal">
+    <div class="project-header"><div><div class="project-title">Project Horizon — Exoplanet Transit Search</div></div><div class="project-status"><div class="status-dot ongoing"></div><span style="color:var(--accent2)">ONGOING</span></div></div>
+    <div class="project-body"><p class="project-desc">Coordinated multi-site transit observations of known hot Jupiter systems from the ExoFOP catalog. Our distributed membership gives us simultaneous sky coverage across hemispheres — critical for capturing complete transit light curves that single sites often miss due to weather or daytime.</p><div class="progress-bar-wrap"><div class="progress-label"><span>TRANSIT EVENTS CAPTURED</span><span>43%</span></div><div class="progress-bar"><div class="progress-fill" data-width="43"></div></div></div><div><span class="event-tag">Exoplanets</span><span class="event-tag">Multi-site</span><span class="event-tag">ExoFOP</span><span class="event-tag">WASP-17b</span></div></div>
+  </div>
+  <div id="solar" class="project-card reveal">
+    <div class="project-header"><div><div class="project-title">Solar Cycle Monitoring Programme</div></div><div class="project-status"><div class="status-dot active"></div><span style="color:#4ade80">ACTIVE</span></div></div>
+    <div class="project-body"><p class="project-desc">Daily solar imaging and sunspot counting contributing to the SIDC World Sunspot Number dataset. Running continuously since 2021 with a 97.3% daily coverage rate — a figure made possible only by our globally distributed membership.</p><div class="progress-bar-wrap"><div class="progress-label"><span>DAILY COVERAGE RATE</span><span>97%</span></div><div class="progress-bar"><div class="progress-fill" data-width="97"></div></div></div><div><span class="event-tag">Solar</span><span class="event-tag">SIDC</span><span class="event-tag">Daily</span><span class="event-tag">Sunspots</span></div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="section-label">Archive</div>
+  <h2 class="section-title" style="margin-bottom:36px">Completed Projects</h2>
+  <div class="project-card reveal">
+    <div class="project-header"><div><div class="project-title">Comet C/2023 P1 Nishimura — Observing Campaign</div></div><div class="project-status"><div class="status-dot complete"></div><span style="color:var(--gold)">COMPLETE</span></div></div>
+    <div class="project-body"><p class="project-desc">A 3-week coordinated imaging campaign capturing the passage of comet Nishimura. 847 images collected from 14 member setups across 6 countries, processed into a time-lapse sequence featured in Sky &amp; Telescope online.</p><div><span class="event-tag">Comets</span><span class="event-tag">Time-lapse</span><span class="event-tag">Published</span><a href="#" class="download-btn" onclick="notify('Downloading…','Comet Campaign report download started.');return false;">⬇ Download Report</a></div></div>
+  </div>
+</section>
+</main>
+<footer id="mainFooter">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-row">
+        <img class="footer-logo-img" src="LOGO.png" alt="AstroHaven">
+        <div>
+          <div>ASTROHAVEN</div>
+          <div class="footer-tagline">Online Astronomy Club · Est. 2020</div>
+        </div>
+      </div>
+      <div class="footer-desc">A premier global online astronomy community dedicated to scientific discovery, celestial observation, and advancing humanity's understanding of the cosmos since 2020.</div>
+    </div>
+    <div class="social-links" style="margin-top:0">
+      <a href="#" onclick="notify('Opening…','Redirecting to X.');return false;" class="social-link">𝕏</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to LinkedIn.');return false;" class="social-link">in</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Instagram.');return false;" class="social-link">📷</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to YouTube.');return false;" class="social-link">▶</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Discord.');return false;" class="social-link">💬</a>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>The Club</h4>
+      <ul>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="about.html#timeline">Timeline</a></li>
+        <li><a href="about.html#values">Core Values</a></li>
+        <li><a href="members.html">Leadership</a></li>
+        <li><a href="press.html">Press &amp; Media</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Science</h4>
+      <ul>
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="projects.html#meridian">Project Meridian</a></li>
+        <li><a href="projects.html#horizon">Project Horizon</a></li>
+        <li><a href="projects.html#solar">Solar Programme</a></li>
+        <li><a href="article-varstar.html">Variable Stars Report</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="events.html">Events Calendar</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="resources.html">Resource Library</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+        <li><a href="members.html">Meet the Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="contact.html">Apply to Join</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="press.html">Media Kit</a></li>
+        <li><a href="resources.html">Certifications</a></li>
+        <li><a href="#" onclick="notify('Opening Discord…','Redirecting to our Discord server.');return false;">Discord Server</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Monthly cosmic dispatches — observation reports, event notices, and research updates delivered to your inbox.</p>
+      <div class="newsletter-input-wrap">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
+        <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 AstroHaven Astronomy Club · All Rights Reserved</div>
+    <div style="display:flex;gap:18px;align-items:center">
+      <span>Exploring the Universe Since 2020</span>
+      <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

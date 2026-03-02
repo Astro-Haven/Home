@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AstroHaven Astronomy Club — Exploring the Universe Together.">
+<title>Events · AstroHaven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Toast -->
+<div class="notif" id="notif">
+  <div class="notif-title" id="notifTitle">Success</div>
+  <div id="notifMsg">Done!</div>
+</div>
+
+<!-- Loader -->
+<div id="loader">
+  <img class="loader-logo-img" src="LOGO.png" alt="AstroHaven">
+  <div class="loader-text">Initializing AstroHaven</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scrollProgress"></div>
+
+<!-- Star canvas -->
+<canvas id="starCanvas"></canvas>
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="LOGO.png" alt="AstroHaven">
+    ASTROHAVEN
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"    id="nav-home">Home</a></li>
+    <li><a href="about.html"    id="nav-about">About</a></li>
+    <li><a href="members.html"  id="nav-members">Members</a></li>
+    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="events.html"   id="nav-events">Events</a></li>
+    <li><a href="gallery.html"  id="nav-gallery">Gallery</a></li>
+    <li><a href="news.html"     id="nav-news">News</a></li>
+    <li><a href="resources.html" id="nav-resources">Resources</a></li>
+    <li><a href="contact.html"  id="nav-contact" class="nav-cta">Join &amp; Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="members.html">Members</a>
+  <a href="projects.html">Projects</a>
+  <a href="events.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Join &amp; Contact</a>
+</div>
+
+<main>
+<div class="page-hero" >
+  <div>
+    <div class="section-label">Schedule</div>
+    <h1 class="page-hero-title">Events &amp;<br><span style="color:var(--accent2)">Observations</span></h1>
+    <div class="section-divider"></div>
+    <p class="section-desc">All AstroHaven events are held online — join from anywhere in the world. All times listed in UTC.</p>
+  </div>
+</div>
+<div class="section-separator"></div>
+<div class="countdown-banner">
+  <div class="countdown-label">Next Event In</div>
+  <div class="countdown-title">Deep Sky Virtual Observation Night</div>
+  <div class="countdown-timer">
+    <div class="countdown-unit"><span class="countdown-number" id="cd-days">12</span><span class="countdown-unit-label">Days</span></div>
+    <div class="countdown-unit"><span class="countdown-number" id="cd-hours">08</span><span class="countdown-unit-label">Hours</span></div>
+    <div class="countdown-unit"><span class="countdown-number" id="cd-mins">34</span><span class="countdown-unit-label">Mins</span></div>
+    <div class="countdown-unit"><span class="countdown-number" id="cd-secs">21</span><span class="countdown-unit-label">Secs</span></div>
+  </div>
+</div>
+<section style="padding-top:24px;padding-bottom:88px">
+  <div class="section-label">Upcoming</div>
+  <h2 class="section-title" style="margin-bottom:8px">All Upcoming Events</h2>
+  <div class="sec-cards" style="margin-top:36px">
+    <div class="sec-card reveal" style="cursor:default">
+      <div class="event-date-badge"><span class="day">14</span><span class="month">Mar</span></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Deep Sky Virtual Observation Night</div>
+        <div class="sec-card-text">Monthly flagship observation session. Targets: M42 (Orion Nebula), NGC 891, Leo Triplet. Members share live views, join voice chat, and contribute data to our shared scientific log.</div>
+        <div class="sec-card-meta"><span>🕙 20:00 UTC — 02:00 UTC</span><span>👥 All Members</span><span>🌐 Club Platform</span></div>
+        <div style="margin-top:22px"><a href="#" onclick="notify('RSVP Confirmed!','You are registered for March 14 Observation Night.');return false;" class="btn-primary btn-sm">RSVP Now</a></div>
+        <span class="sec-card-tag" style="margin-top:18px">Observation</span><span class="sec-card-tag">Science</span>
+      </div>
+      <div class="sec-card-arrow" style="display:none"></div>
+    </div>
+    <div class="sec-card reveal" style="cursor:default">
+      <div class="event-date-badge"><span class="day">22</span><span class="month">Mar</span></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Astrophotography Post-Processing Workshop</div>
+        <div class="sec-card-text">Hands-on virtual workshop covering the complete astrophotography pipeline. Topics: stacking in DeepSkyStacker, calibration frames, gradient removal, deconvolution, and HDR combination. Bring your own raw data for live guided processing.</div>
+        <div class="sec-card-meta"><span>🕙 14:00 — 17:00 UTC</span><span>💻 Zoom</span></div>
+        <div style="margin-top:22px"><a href="#" onclick="notify('RSVP Confirmed!','You are registered for the March 22 Workshop.');return false;" class="btn-primary btn-sm">RSVP Now</a></div>
+        <span class="sec-card-tag" style="margin-top:18px">Workshop</span><span class="sec-card-tag">Imaging</span>
+      </div>
+      <div class="sec-card-arrow" style="display:none"></div>
+    </div>
+    <div class="sec-card reveal" style="cursor:default">
+      <div class="event-date-badge"><span class="day">05</span><span class="month">Apr</span></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Spring Public Virtual Star Party</div>
+        <div class="sec-card-text">Annual spring outreach event open to the public at no cost. Live-streamed guided tours of the spring night sky from multiple member telescopes around the globe, with expert commentary and live Q&amp;A.</div>
+        <div class="sec-card-meta"><span>🕙 19:30 — 23:00 UTC</span><span>📺 YouTube Live</span><span>🌐 Free</span></div>
+        <div style="margin-top:22px"><a href="#" onclick="notify('RSVP Confirmed!','You are registered for the April 5 Star Party.');return false;" class="btn-primary btn-sm">RSVP Now</a></div>
+        <span class="sec-card-tag" style="margin-top:18px">Public</span><span class="sec-card-tag">Free</span><span class="sec-card-tag">Outreach</span>
+      </div>
+      <div class="sec-card-arrow" style="display:none"></div>
+    </div>
+    <div class="sec-card reveal" style="cursor:default">
+      <div class="event-date-badge"><span class="day">18</span><span class="month">Apr</span></div>
+      <div class="sec-card-body">
+        <div class="sec-card-title">Lyrid Meteor Shower Community Watch</div>
+        <div class="sec-card-text">Annual Lyrid meteor shower coordinated observation event. Peak rates of 10–15 meteors per hour expected under dark skies. Members report sightings to our real-time live map with timestamps for scientific analysis.</div>
+        <div class="sec-card-meta"><span>🕙 23:00 UTC onwards</span><span>👥 All Members</span><span>🌐 Club Platform</span></div>
+        <div style="margin-top:22px"><a href="#" onclick="notify('RSVP Confirmed!','You are registered for the April 18 Lyrid Watch.');return false;" class="btn-primary btn-sm">RSVP Now</a></div>
+        <span class="sec-card-tag" style="margin-top:18px">Special</span><span class="sec-card-tag">Meteors</span>
+      </div>
+      <div class="sec-card-arrow" style="display:none"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer id="mainFooter">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-row">
+        <img class="footer-logo-img" src="LOGO.png" alt="AstroHaven">
+        <div>
+          <div>ASTROHAVEN</div>
+          <div class="footer-tagline">Online Astronomy Club · Est. 2020</div>
+        </div>
+      </div>
+      <div class="footer-desc">A premier global online astronomy community dedicated to scientific discovery, celestial observation, and advancing humanity's understanding of the cosmos since 2020.</div>
+    </div>
+    <div class="social-links" style="margin-top:0">
+      <a href="#" onclick="notify('Opening…','Redirecting to X.');return false;" class="social-link">𝕏</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to LinkedIn.');return false;" class="social-link">in</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Instagram.');return false;" class="social-link">📷</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to YouTube.');return false;" class="social-link">▶</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Discord.');return false;" class="social-link">💬</a>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>The Club</h4>
+      <ul>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="about.html#timeline">Timeline</a></li>
+        <li><a href="about.html#values">Core Values</a></li>
+        <li><a href="members.html">Leadership</a></li>
+        <li><a href="press.html">Press &amp; Media</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Science</h4>
+      <ul>
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="projects.html#meridian">Project Meridian</a></li>
+        <li><a href="projects.html#horizon">Project Horizon</a></li>
+        <li><a href="projects.html#solar">Solar Programme</a></li>
+        <li><a href="article-varstar.html">Variable Stars Report</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="events.html">Events Calendar</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="resources.html">Resource Library</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+        <li><a href="members.html">Meet the Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="contact.html">Apply to Join</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="press.html">Media Kit</a></li>
+        <li><a href="resources.html">Certifications</a></li>
+        <li><a href="#" onclick="notify('Opening Discord…','Redirecting to our Discord server.');return false;">Discord Server</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Monthly cosmic dispatches — observation reports, event notices, and research updates delivered to your inbox.</p>
+      <div class="newsletter-input-wrap">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
+        <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 AstroHaven Astronomy Club · All Rights Reserved</div>
+    <div style="display:flex;gap:18px;align-items:center">
+      <span>Exploring the Universe Since 2020</span>
+      <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

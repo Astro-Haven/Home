@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AstroHaven Astronomy Club — Exploring the Universe Together.">
+<title>About · AstroHaven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Toast -->
+<div class="notif" id="notif">
+  <div class="notif-title" id="notifTitle">Success</div>
+  <div id="notifMsg">Done!</div>
+</div>
+
+<!-- Loader -->
+<div id="loader">
+  <img class="loader-logo-img" src="LOGO.png" alt="AstroHaven">
+  <div class="loader-text">Initializing AstroHaven</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scrollProgress"></div>
+
+<!-- Star canvas -->
+<canvas id="starCanvas"></canvas>
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="LOGO.png" alt="AstroHaven">
+    ASTROHAVEN
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"    id="nav-home">Home</a></li>
+    <li><a href="about.html"    id="nav-about">About</a></li>
+    <li><a href="members.html"  id="nav-members">Members</a></li>
+    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="events.html"   id="nav-events">Events</a></li>
+    <li><a href="gallery.html"  id="nav-gallery">Gallery</a></li>
+    <li><a href="news.html"     id="nav-news">News</a></li>
+    <li><a href="resources.html" id="nav-resources">Resources</a></li>
+    <li><a href="contact.html"  id="nav-contact" class="nav-cta">Join &amp; Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="members.html">Members</a>
+  <a href="projects.html">Projects</a>
+  <a href="events.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Join &amp; Contact</a>
+</div>
+
+<main>
+<div class="page-hero" >
+  <div>
+    <div class="section-label">Who We Are</div>
+    <h1 class="page-hero-title">About<br><span style="color:var(--accent2)">AstroHaven</span></h1>
+    <div class="section-divider"></div>
+    <p class="section-desc">Founded in 2020 by a group of passionate stargazers, AstroHaven has grown from a small online meetup into a recognised institution in the global amateur astronomy community.</p>
+  </div>
+</div>
+<div class="section-separator"></div>
+
+<section class="reveal">
+  <div class="section-label">Our History</div>
+  <h2 class="section-title">Our Story</h2>
+  <div class="section-divider"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px">
+    <p style="font-size:1rem;color:var(--gold);line-height:2.1;font-weight:400">AstroHaven was born in the digital space in November 2020, when five amateur astronomers scattered across different continents decided to connect their telescopes and their curiosity. What began as informal monthly online meetups rapidly evolved into something none of us anticipated.<br><br>Today we are a 54-member strong global organisation with research programs contributing to international databases, and an outreach program that has introduced over 3,000 people to the wonders of astronomy — all online.</p>
+    <p style="font-size:1rem;color:var(--gold);line-height:2.1;font-weight:400">Our founding vision was simple: create a digital space where scientific rigour meets genuine wonder. We refused to be a casual chat group. From day one, we structured ourselves like a small institution — with divisions, research protocols, and a commitment to quality output.<br><br>This philosophy has attracted members from diverse backgrounds — physicists, engineers, teachers, artists, and curious minds from every corner of the world — united by the oldest human impulse: looking up.</p>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<section id="timeline" class="reveal">
+  <div class="section-label">Journey</div>
+  <h2 class="section-title">Our Timeline</h2>
+  <div class="section-divider"></div>
+  <div class="timeline">
+    <div class="timeline-item reveal"><div class="timeline-year">NOVEMBER 2020</div><div class="timeline-title">Founding Night</div><div class="timeline-text">Five founding members connect online for the first unofficial AstroHaven observation session, sharing live telescope views across three different continents.</div></div>
+    <div class="timeline-item reveal"><div class="timeline-year">MARCH 2021</div><div class="timeline-title">Official Establishment</div><div class="timeline-text">AstroHaven is formally established as an online astronomy club with 28 founding members across 12 countries. First constitution drafted and divisions established.</div></div>
+    <div class="timeline-item reveal"><div class="timeline-year">SEPTEMBER 2021</div><div class="timeline-title">Platform Launch</div><div class="timeline-text">Launched our custom online collaboration platform, enabling shared observation sessions, data pooling, and automated multi-telescope coordination.</div></div>
+    <div class="timeline-item reveal"><div class="timeline-year">FEBRUARY 2022</div><div class="timeline-title">Project Meridian Launches</div><div class="timeline-text">Launch of our flagship variable star monitoring program. First formal research proposal submitted to AAVSO for inclusion in their international observer network.</div></div>
+    <div class="timeline-item reveal"><div class="timeline-year">OCTOBER 2023</div><div class="timeline-title">First Peer-Reviewed Publication</div><div class="timeline-text">Club data contributes to a peer-reviewed paper on RR Lyrae period variations, with three members listed as co-authors in a major astrophysics journal.</div></div>
+    <div class="timeline-item reveal"><div class="timeline-year">2026 — PRESENT</div><div class="timeline-title">54 Members &amp; Growing</div><div class="timeline-text">Now one of the most active online astronomy clubs globally, with members contributing to science every clear night.</div></div>
+  </div>
+</section>
+<div class="section-separator"></div>
+
+<section id="values" class="reveal" style="padding-bottom:88px">
+  <div class="section-label">What We Believe</div>
+  <h2 class="section-title">Core Values</h2>
+  <div class="section-divider"></div>
+  <div class="values-list">
+    <div class="value-sec reveal"><div class="value-sec-icon-wrap"><div class="value-sec-icon">🔬</div></div><div><div class="value-sec-name">Scientific Integrity</div><div class="value-sec-text">Every observation is rigorously documented and every claim is evidence-based. We hold ourselves to publication-grade standards because real science demands nothing less — even in an amateur setting. Our data is timestamped, calibrated, and cross-checked before submission to any external database.</div></div></div>
+    <div class="value-sec reveal"><div class="value-sec-icon-wrap"><div class="value-sec-icon">🌍</div></div><div><div class="value-sec-name">Radical Inclusion</div><div class="value-sec-text">The universe belongs to everyone. Being an online club means geography, socioeconomic background, or lack of expensive equipment is no barrier. We actively work to make serious astronomy accessible to all — from subsidised membership to loaner software licences.</div></div></div>
+    <div class="value-sec reveal"><div class="value-sec-icon-wrap"><div class="value-sec-icon">🤝</div></div><div><div class="value-sec-name">Collaborative Spirit</div><div class="value-sec-text">We believe the best discoveries happen when diverse minds — across continents and time zones — work together. Our distributed structure is not a limitation; it is our greatest scientific strength, enabling continuous 24-hour global sky coverage.</div></div></div>
+    <div class="value-sec reveal"><div class="value-sec-icon-wrap"><div class="value-sec-icon">💡</div></div><div><div class="value-sec-name">Perpetual Curiosity</div><div class="value-sec-text">We never stop asking questions. That impulse — to look up, to wonder, to seek understanding — is the common thread connecting every member of this community, from PhD astrophysicists to enthusiastic beginners seeing Jupiter through a telescope for the first time.</div></div></div>
+    <div class="value-sec reveal"><div class="value-sec-icon-wrap"><div class="value-sec-icon">✨</div></div><div><div class="value-sec-name">Wonder as Purpose</div><div class="value-sec-text">At our core, we are still those five people on a call, sharing telescope views across continents, utterly awestruck by a sky full of stars. That sense of wonder is not a side effect of what we do — it is the whole point.</div></div></div>
+  </div>
+</section>
+</main>
+<footer id="mainFooter">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-row">
+        <img class="footer-logo-img" src="LOGO.png" alt="AstroHaven">
+        <div>
+          <div>ASTROHAVEN</div>
+          <div class="footer-tagline">Online Astronomy Club · Est. 2020</div>
+        </div>
+      </div>
+      <div class="footer-desc">A premier global online astronomy community dedicated to scientific discovery, celestial observation, and advancing humanity's understanding of the cosmos since 2020.</div>
+    </div>
+    <div class="social-links" style="margin-top:0">
+      <a href="#" onclick="notify('Opening…','Redirecting to X.');return false;" class="social-link">𝕏</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to LinkedIn.');return false;" class="social-link">in</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Instagram.');return false;" class="social-link">📷</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to YouTube.');return false;" class="social-link">▶</a>
+      <a href="#" onclick="notify('Opening…','Redirecting to Discord.');return false;" class="social-link">💬</a>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>The Club</h4>
+      <ul>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="about.html#timeline">Timeline</a></li>
+        <li><a href="about.html#values">Core Values</a></li>
+        <li><a href="members.html">Leadership</a></li>
+        <li><a href="press.html">Press &amp; Media</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Science</h4>
+      <ul>
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="projects.html#meridian">Project Meridian</a></li>
+        <li><a href="projects.html#horizon">Project Horizon</a></li>
+        <li><a href="projects.html#solar">Solar Programme</a></li>
+        <li><a href="article-varstar.html">Variable Stars Report</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="events.html">Events Calendar</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="resources.html">Resource Library</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+        <li><a href="members.html">Meet the Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="contact.html">Apply to Join</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="press.html">Media Kit</a></li>
+        <li><a href="resources.html">Certifications</a></li>
+        <li><a href="#" onclick="notify('Opening Discord…','Redirecting to our Discord server.');return false;">Discord Server</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Monthly cosmic dispatches — observation reports, event notices, and research updates delivered to your inbox.</p>
+      <div class="newsletter-input-wrap">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
+        <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 AstroHaven Astronomy Club · All Rights Reserved</div>
+    <div style="display:flex;gap:18px;align-items:center">
+      <span>Exploring the Universe Since 2020</span>
+      <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
